@@ -1,0 +1,80 @@
+version: 2
+lang_code: ca
+lang_name: Catala
+rtl: false
+
+title: Acordió de Funcions de Suavitzat
+description:
+  Fer animacions més realistes triant la funció de suavitzat adequada.
+share:
+  
+Les funcions de suavitzat especifiquen la velocitat de l'animació
+per a fer el moviment més natural. Els objectes reals solo no es mouen
+a una velocitat constant, i no arrenquen i es detenen en un instant.
+Aquesta pàgina t'ajuda a triar la funció de suavitzat correcta.
+
+about: __format
+  ~~Les funcions de suavitzat~~ especifiquen la raó de canvi d'un paràmetre
+sobre el temps.
+
+  Els objectes en la vida real sol no inicien i paren instantàniament, i gairebé
+mai es mouen a una velocitat constant. Quan obrim un calaix, primer
+el movem ràpidament i anem més a poc a poc conforme va sortint. Deixa caure
+alguna cosa al terra, aquest primer s'accelera cap avall, i després rebota de tornada
+cap amunt al colpejar el terra.
+
+  Aquesta pàgina t'ajuda a triar la funció de suavitzat correcta.
+
+howtos:
+  css:
+    text: En CSS, les propietats 'transition' i 'animation' et permeten especificar una funció de suavitzat.
+    edit: Editar en ^cubic-bezier.com^.
+    with_animation: En CSS, aquesta funció pot ser implementada usant {{@keyframes}}
+    example_size: Mida
+    example_position: Posició
+    example_opacity: Transparencia
+
+  postcss:
+    text:
+      EEn PostCSS, la funció de suavitzat és molt més fàcil de descriure.
+Existeix un plugin ^postcss-*easings^ que pren la informació de transició
+d'aquest lloc.
+    explanation: Tal declaració és convertida a la que és descrita a dalt.
+    disabled:
+      Desafortunadament, la funció de suavitzat no pot ser establerta amb
+cap plugin PostCSS. Pot fer-se amb {{@keyframes}}, veure a dalt.ba.
+
+  gradient:
+    name: Gradient
+    text: És possible dibuixar un gradient usant ^postcss-easing-gradients^.
+
+  mathfunction:
+    name: Funció Matematica
+    text:
+A baix veuràs el codi d'aquesta funció de suavitzat escrit en TypeScript.
+La variable x representa el progrés absolut de l'animació
+en els límits de 0 (inici de l'animació) i 1 (fi de l'animació).
+
+easing:
+  all_easings: Tots els suavitzats
+  check: Comprovar suavitzat per canvis
+  check_size: de mida
+  check_position: Posicions
+  check_opacity: Transparencies
+  current_func: Functión actual
+  linear_func: Función linear
+  load: Cargan...
+
+opensource:
+  title: Open Source
+  translate: Ayuda a traduir la pagina al teva llengua
+
+authors:
+  sitnik: Andrey Sitnik
+  separator: e
+  solovev: Ivan Solovev
+
+theme:
+  auto: Tema auto
+  light: Tema clar
+  dark: Tema fosc
